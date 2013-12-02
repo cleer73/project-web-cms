@@ -1,0 +1,4 @@
+/vendor/
+.DS_Store
+*.pyc
+composer.lock
