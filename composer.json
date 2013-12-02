@@ -1,0 +1,15 @@
+{
+    "name": "cleer73/project-web-cms",
+    "description": "An exercise in building a personal CMS.",
+    "require": {
+        "slim/slim": "2.*"
+    },
+    "license": "FreeBSD License",
+    "authors": [
+        {
+            "name": "Jacob Lee",
+            "email": "jake@cleer.net"
+        }
+    ],
+    "minimum-stability": "alpha"
+}
