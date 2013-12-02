@@ -2,7 +2,8 @@
     "name": "cleer73/project-web-cms",
     "description": "An exercise in building a personal CMS.",
     "require": {
-        "slim/slim": "2.*"
+        "slim/slim": "2.*",
+        "dflydev/markdown": "1.0.*"
     },
     "license": "FreeBSD License",
     "authors": [
