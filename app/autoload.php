@@ -16,7 +16,7 @@ spl_autoload_register(function ($className) {
     $path = str_replace('\\\\', '/', strtolower($matches[2]));
     $file = lcfirst($matches[3]);
     $filename = sprintf('app/%s/%s.php', $path, $file);
-  } else if (preg_match("/^(\\\|)dflydev\\\markdown\\\(.*)/i", $className, $matches))
+  } else if (preg_match("/^(\\\|)dflydev\\\markdown\\\(.*)/i", $className, $matches)) {
     $file = str_replace('\\\\', '/', strtolower($matches[2]));
     $filename = sprintf('vendor/dflydev/markdown/src/dflydev/markdown/%s.php', $file);
   } else {
