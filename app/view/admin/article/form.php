@@ -32,11 +32,11 @@
         <fieldset>
           <legend>Type</legend>
           <label for="article-type-post">
-            <input id="article-type-post" name="article[type]" type="radio" value="post" <?= ($type=='create' || $article['type']=='post' ? 'checked' : '') ?>>
+            <input id="article-type-post" name="article[type]" type="radio" value="post" <?= ($type=='update' ? 'checked' : '') ?>>
             <span>Post</span>
           </label>
           <label for="article-type-page">
-            <input id="article-type-page" name="article[type]" type="radio" value="page" <?= ($type=='update' && $article['type']=='page' ? 'checked' : '') ?>>
+            <input id="article-type-page" name="article[type]" type="radio" value="page" <?= ($type=='update' ? 'checked' : '') ?>>
             <span>Page</span>
           </label>
         </fieldset>
@@ -45,11 +45,11 @@
         <fieldset>
           <legend>Status</legend>
           <label for="article-status-draft">
-            <input id="article-status-draft" name="article[status]" type="radio" value="draft"  <?= ($type=='create' || $article['status']=='draft' ? 'checked' : '') ?>>
+            <input id="article-status-draft" name="article[status]" type="radio" value="draft"  <?= ($type=='create' ? 'checked' : '') ?>>
             <span>Draft</span>
           </label>
           <label for="article-status-publish">
-            <input id="article-status-publish" name="article[status]" type="radio" value="publish" <?= ($type=='update' || $article['status']=='publish' ? 'checked' : '') ?>>
+            <input id="article-status-publish" name="article[status]" type="radio" value="publish" <?= ($type=='update' ? 'checked' : '') ?>>
             <span>Publish</span>
           </label>
         </fieldset>
