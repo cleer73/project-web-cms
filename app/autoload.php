@@ -6,9 +6,8 @@ set_include_path(implode(PATH_SEPARATOR, array(
   get_include_path(),
 )));
 
-// Register Slim's autoloader.
-include 'vendor/slim/slim/Slim/Slim.php';
-\Slim\Slim::registerAutoloader();
+// Use the Composer Autoloader.
+require_once 'vendor/autoload.php';
 
 // Register the App's autoloader.
 spl_autoload_register(function ($className) {
@@ -16,9 +15,6 @@ spl_autoload_register(function ($className) {
     $path = str_replace('\\\\', '/', strtolower($matches[2]));
     $file = lcfirst($matches[3]);
     $filename = sprintf('app/%s/%s.php', $path, $file);
-  } else if (preg_match("/^(\\\|)dflydev\\\markdown\\\(.*)/i", $className, $matches)) {
-    $file = str_replace('\\\\', '/', strtolower($matches[2]));
-    $filename = sprintf('vendor/dflydev/markdown/src/dflydev/markdown/%s.php', $file);
   } else {
     return false;
   }
