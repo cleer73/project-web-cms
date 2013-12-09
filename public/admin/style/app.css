@@ -1,0 +1,59 @@
+body {
+  padding-top: 20px;
+}
+
+table {
+  margin: 0px 0px 20px 0px;
+}
+
+pre {
+  padding: 20px;
+  background-color: #EEE;
+  border-radius: 10px;
+}
+
+table th {
+  font-weight: bold;
+}
+
+table td,
+table th {
+  margin: 0px;
+  padding: 4px 8px;
+  text-align: left;
+}
+
+input[type=text],
+input[type=password] {
+  width: 99%;
+}
+
+textarea {
+  width: 99%;
+}
+
+.alert {
+  padding: 10px;
+  background-color: #DDD;
+  border-radius: 5px;
+}
+
+.alert > strong,
+.alert > a {
+  color: inherit;
+}
+
+.alert.info {
+  background-color: #D9EDF7;
+  color: #31708F;
+}
+
+.table thead td,
+.table thead th {
+  border-bottom: 1px solid #DDDDDD;
+}
+
+.table tbody td,
+.table tbody th {
+  border-top: 1px solid #DDDDDD;
+}
