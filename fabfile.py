@@ -2,12 +2,13 @@ from fabric.api import *
 import json
 
 env.type = 'dev'
-env.hosts = ['127.0.0.1:2222']
+env.hosts = ['127.0.0.1:2200']
 env.user = 'vagrant'
 env.password = 'vagrant'
 
 @task(default=True)
 def everything(destroy=False):
+
     if destroy: local('vagrant destroy')
     local('vagrant up --provider virtualbox')
 
