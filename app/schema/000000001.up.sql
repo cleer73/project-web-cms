@@ -1,0 +1,20 @@
+CREATE TABLE `article` (
+  `id` bigint(20) unsigned NOT NULL auto_increment,
+  `author` varchar(255) NOT NULL default 'unknown@host.net',
+  `created_on` datetime NOT NULL default '0000-00-00 00:00:00',
+  `created_on_gmt` datetime NOT NULL default '0000-00-00 00:00:00',
+  `modified_on` datetime NOT NULL default '0000-00-00 00:00:00',
+  `modified_on_gmt` datetime NOT NULL default '0000-00-00 00:00:00',
+  `name` varchar(200) NOT NULL default '',
+  `title` text NOT NULL,
+  `excerpt` text NOT NULL,
+  `type` varchar(20) NOT NULL default 'post',
+  `status` varchar(20) NOT NULL default 'publish',
+  `content` longtext NOT NULL,
+  `parent_article_id` bigint(20) unsigned NOT NULL default '0',
+  PRIMARY KEY (`id`),
+  KEY name (`name`),
+  KEY type_status_date (`type`, `status`, `created_on`, `id`),
+  KEY parent_article (`parent_article_id`),
+  KEY author (`author`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
