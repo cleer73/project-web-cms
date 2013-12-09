@@ -3,16 +3,20 @@
 $app->group('/admin', function () use ($app) {
   $app->group('/article', function () use ($app) {
     $app->get('/create', function () use ($app) {
-      $app->render('article/create', [
+      $app->render('article/form', [
         'context' => 'admin',
         'container' => [
-          'title' => 'Admin Home',
-          'site' => 'localhost',
+          'title' => 'Create an Article',
+          'site' => 'test.net',
           'author' => '',
           'description' => '',
           'slug' => 'admin-home',
         ],
-        'view' => []
+        'view' => [
+          'type' => 'create',
+          'title' => 'Create an Article',
+          'action' => '/admin/article/create',
+        ]
       ]);
     });
 
