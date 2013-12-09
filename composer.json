@@ -3,7 +3,8 @@
     "description": "An exercise in building a personal CMS.",
     "require": {
         "slim/slim": "2.*",
-        "dflydev/markdown": "1.0.*"
+        "dflydev/markdown": "1.0.*",
+        "aura/sql": "1.3.*"
     },
     "license": "FreeBSD License",
     "authors": [
