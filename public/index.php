@@ -1,9 +1,15 @@
 <?php
 
-include realpath(dirname(__FILE__).'/../app').'/autoload.php';
+$appRoot = realpath(dirname(__FILE__).'/../app');
 
-$app = new \Slim\Slim();
+include "{$appRoot}/autoload.php";
 
-include "app/routes/home.php";
+$app = new \Slim\Slim([
+  'view' => new App\Util\View(),
+  'templates.path' => "{$appRoot}/view"
+]);
+
+include "app/routes/admin.php";
+include "app/routes/cms.php";
 
 $app->run();
