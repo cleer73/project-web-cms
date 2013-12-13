@@ -20,7 +20,7 @@
         <?php foreach($articles as $a): ?>
         <tr>
           <td>
-            <h4><a href="/admin/article/edit/<?= $a['id'] ?>"><?= $a['title'] ?></a></h4>
+            <h4><a href="/admin/article/update/<?= $a['id'] ?>"><?= $a['title'] ?></a></h4>
             <?= $a['excerpt'] ?>
           </td>
           <td style="width: 225px;">
